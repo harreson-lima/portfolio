@@ -3,6 +3,7 @@
 :root {
   --bg-color: #cbeaf7;
   --text-clr: #032F3F;
+  --light-text-clr: #fff;
 }
 
 * {
@@ -60,44 +61,40 @@ h1,p {
 
 .sideBar-navigation {
   position: fixed;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  top: 10px;
+  transform: translatex(-50%);
 }
 
 .menu {
   display: none;
-  background-color: rgba(0, 0, 0, 0.2);
   list-style: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   backdrop-filter: blur(10px);
-  border-radius: 8px;
-  padding: 20px 15px;
   display: none;
   display: flex;
   justify-content: center;
   align-items: start;
   gap: 2rem;
   overflow-x: hidden;
-}
-
-li a .item-label {
-  display: none;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in;
+  transition: resize 0.5s ease-in;
 }
 
 li a{
-  /* background-color: rgba(0, 0, 0, 0.2);
-  padding: 20px 15px;
-  min-width: 60px; */
+  padding: 0.8rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
-li a:hover .item-label {
-  display: inline;
-  transform: translateX(0%);
+li a i {
+  display: none !important;
+}
+
+.active {
+  background-color: hsla(0, 0%, 0%, 0.5);
+  backdrop-filter: blur(10px);
+  color: var(--light-text-clr);
+  border-radius: 8px;
 }
