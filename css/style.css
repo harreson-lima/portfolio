@@ -2,6 +2,7 @@
 
 :root {
   --primary-clr: #0c1336;
+  --btn-clr: #141d4d;
   --secondary-clr: #00ABEF;
   --accent-clr: #FF6746;
   --text-clr: #FAFAFA;
@@ -20,7 +21,7 @@
   --pd-1: 1rem;
   --pd-2: 1.5rem;
   --pd-3: 2rem;
-  --pd-4: 2.5rem;
+  --pd-4: 3.5rem;
 }
 
 /* Setup */
@@ -62,12 +63,11 @@ a {
   cursor: pointer;
 }
 ::-webkit-scrollbar-thumb:hover {
-  --accent-clr: #ff6846d0;
+  --accent-clr: #ff6846c0;
 }
 
 .container {
-  /* border: 1px solid wheat; */
-  max-width: clamp(300px, 100vw, 1400px);
+  max-width: clamp(300px, 100vw, 1600px);
   margin-inline: auto;
   padding-inline: var(--pd-2);
   position: relative;
@@ -90,7 +90,6 @@ a {
 }
 
 .logo {
-  --primary-clr: #141d4d;
   height: 60px;
   width: 60px;
   padding: var(--pd-3);
@@ -99,7 +98,7 @@ a {
   font-size: var(--fs-5);
   font-weight: bold;
   color: var(--text-clr);
-  background-color: var(--primary-clr);
+  background-color: var(--btn-clr);
   border-radius: 10px;
   -webkit-box-shadow: 0px 3px 5px  rgba(0,0,0,0.25);
   -moz-box-shadow: 0px 3px 5px  rgba(0,0,0,0.25);
@@ -162,6 +161,8 @@ a {
 
 /* hero section */
 
+  /* left side */
+
 .hero__info {
   flex: 1;
   flex-direction: column;
@@ -188,35 +189,59 @@ a {
   margin-bottom: var(--pd-4);
 }
 
-.hero__info__actions {
+.hero__info__btns {
   gap: var(--fs-6);
 }
 
-.actions__link {
-  color: #00ABEF;
+.btn {
+  position: relative;
+  color: var(--text-clr);
   font-size: 1.1rem;
   font-weight: bold;
-  min-width: 200px;
+  text-transform: uppercase;
   text-align: center;
+  min-width: 200px;
   padding: var(--fs-1) var(--pd-2);
-  border: 1px solid #00ABEF;
-  /* border: none; */
-  /* border-radius: 8px; */
-  transition: opacity 0.3s;
+  background-color: var(--btn-clr);
+  overflow: hidden;
+  transition: color 0.3s;
 }
 
-.actions__link i {
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn i {
   margin-right: 5px;
 }
 
-.actions__link:hover {
-  opacity: 0.8;
+.btn::before {
+  content: '';
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%,-50%);
+  width: 0;
+  height: 0;
+  opacity: 0;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, var(--secondary-clr), var(--accent-clr));
+  transition: width 0.5s, height 0.5s, opacity 0.5s;
+
 }
 
+.btn:hover::before{
+  height: 450px;
+  width: 450px;
+  opacity: 1;
+}
 
+.btn:hover {
+  color: var(--primary-clr);
+}
 
-
-
+  /* right side */
 
 .hero__game {
   flex: 1;
