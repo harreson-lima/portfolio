@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
   --primary-clr: #0c1336;
   --secondary-clr: #00ABEF;
   --accent-clr: #FF6746;
   --text-clr: #FAFAFA;
   --dark-text-clr: #a3a2b8;
-  --scroll-thumb-clr: #FF6746;
-  --scroll-thumb-hover-clr: #FF6746c2;
 
   --fs-1: 1rem;
   --fs-2: 1.5rem;
@@ -16,23 +15,36 @@
   --fs-6: 2.75rem;
   --fs-7: 3rem;
   --fs-8: 3.5rem;
-  --fs-9: 4rem;
+  --fs-9: 4.5rem;
 
   --pd-1: 1rem;
   --pd-2: 1.5rem;
   --pd-3: 2rem;
-  --pd-4: 2.2rem;
+  --pd-4: 2.5rem;
 }
+
+/* Setup */
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary-clr);
+  color: var(--text-clr);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {
@@ -44,19 +56,13 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-thumb-clr);
+  background-color: var(--accent-clr);
   border-radius: 50px;
   border: 2px solid var(--primary-clr);
   cursor: pointer;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--scroll-thumb-hover-clr);
-}
-
-body {
-  background-color: var(--primary-clr);
-  color: var(--text-clr);
-  overflow-x: hidden;
+  --accent-clr: #ff6846d0;
 }
 
 .container {
@@ -71,39 +77,37 @@ body {
   min-height: 100dvh;
 }
 
-header {
+.flex {
   display: flex;
+}
+
+/* header */
+
+.header {
   justify-content: space-between;
   align-items: center;
   padding: var(--pd-1) 0;
-  /* background-color: red; */
 }
-
-
-
-/* Logo */
 
 .logo {
   --primary-clr: #141d4d;
-  padding: var(--pd-3);
   height: 60px;
   width: 60px;
-  display: flex;
+  padding: var(--pd-3);
   justify-content: center;
   align-items: center;
   font-size: var(--fs-5);
   font-weight: bold;
   color: var(--text-clr);
-  border-radius: 10px;
   background-color: var(--primary-clr);
+  border-radius: 10px;
   -webkit-box-shadow: 0px 3px 5px  rgba(0,0,0,0.25);
   -moz-box-shadow: 0px 3px 5px  rgba(0,0,0,0.25);
   box-shadow: 0px 3px 5px rgba(0,0,0,0.25);
   -webkit-user-select: none; 
   -ms-user-select: none; 
   user-select: none;
-  transition: transform 0.4s 0.2s;
-
+  transition: transform 0.4s 0.1s;
 }
 
 .logo:hover {
@@ -115,52 +119,176 @@ header {
   color: var(--accent-clr);
 }
 
-
-
-
-/* menu */
-
-a {
-  text-decoration: none;
-}
-
 .navigation{
-  display: flex;
   list-style: none;
 }
-.naviagtion__item{
-  transition: transform 0.3s;
-}
 
-.naviagtion__item:hover {
-  transform: translateY(-5px);
-}
-
+.naviagtion__item, 
 .naviagtion__item a {
   color: var(--text-clr);
-  padding: var(--pd-1) var(--pd-2);
   transition: color 0.3s;
+  transition: transform 0.3s, color 0.3s;
 }
 
-.naviagtion__item a:hover {
+.naviagtion__item:hover,
+.naviagtion__item a:hover  {
+  transform: translateY(-5px);
   color: var(--secondary-clr);
 }
 
-
-/* language */
+.naviagtion__item a {
+  padding: var(--pd-1) var(--pd-2);
+}
 
 .language {
   color: var(--text-clr);
-  display: flex;
   justify-content: center;
   align-items: center;
   gap: 2px;
+  transition: color 0.3s;
 }
 
 .language svg {
   fill: var(--text-clr);
+  transition: fill 0.3s;
+}
+
+.language:hover,
+.language:hover svg {
+  fill: var(--secondary-clr);
+  color: var(--secondary-clr);
+}
+
+
+/* hero section */
+
+.hero__info {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
 
 }
+
+.hero__info__title {
+  font-size: var(--fs-9);
+  line-height: 5.5rem;
+  margin-bottom: 5px;
+}
+
+.hero__info__subtitle {
+  font-size: var(--fs-5);
+  color: var(--secondary-clr);
+  margin-bottom: 15px;
+}
+
+.hero__info__text {
+  font-size: var(--fs-1);
+  color: var(--dark-text-clr);
+  line-height: 1.75rem;
+  margin-bottom: var(--pd-4);
+}
+
+.hero__info__actions {
+  gap: var(--fs-6);
+}
+
+.actions__link {
+  color: #00ABEF;
+  font-size: 1.1rem;
+  font-weight: bold;
+  min-width: 200px;
+  text-align: center;
+  padding: var(--fs-1) var(--pd-2);
+  border: 1px solid #00ABEF;
+  /* border: none; */
+  /* border-radius: 8px; */
+  transition: opacity 0.3s;
+}
+
+.actions__link i {
+  margin-right: 5px;
+}
+
+.actions__link:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+
+.hero__game {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
