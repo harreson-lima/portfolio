@@ -7,6 +7,10 @@
   --accent-clr: #FF6746;
   --text-clr: #FAFAFA;
   --dark-text-clr: #a3a2b8;
+  --game-board-clr: #86c06c;
+  --food-clr: #306850;
+  --snake-clr: #071821;
+  --game-box-clr: #283445;
 
   --fs-1: 1rem;
   --fs-2: 1.2rem;
@@ -98,11 +102,6 @@ a {
   font-size: var(--fs-5);
   font-weight: bold;
   color: var(--text-clr);
-  background-color: var(--btn-clr);
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 3px 5px  rgba(0,0,0,0.25);
-  -moz-box-shadow: 0px 3px 5px  rgba(0,0,0,0.25);
-  box-shadow: 0px 3px 5px rgba(0,0,0,0.25);
   -webkit-user-select: none; 
   -ms-user-select: none; 
   user-select: none;
@@ -110,7 +109,6 @@ a {
 }
 
 .logo:hover {
-  cursor: pointer;
   transform: rotateX(180deg);
 }
 
@@ -252,7 +250,7 @@ a {
 .game__wrapper {
   width: fit-content;
   height: fit-content;
-  background-color: #283445;
+  background-color: var(--game-box-clr);
   border-radius: 5px;
   overflow: hidden;  
   position: relative;
@@ -314,7 +312,7 @@ a {
 .game__board {
   width: 450px;
   height: 450px;
-  background-color: #86c06c;
+  background-color: var(--game-board-clr);
   display: grid;
   grid-template: repeat(30,1fr) / repeat(30,1fr);
   border-radius: 0 0 5px 5px ;
@@ -322,12 +320,54 @@ a {
 
 
 .game__board__food {
-  background-color: #306850;
+  background-color: var(--food-clr);
 }
 
 .game__board__head {
-  background-color: #071821;
+  background-color: var(--snake-clr);
 }
 
 /* About Section */
 
+.about {
+  justify-content: center;
+  align-items: center;
+  /* background-color: #00ABEF; */
+  padding-inline: var(--pd-1);
+}
+
+.about__img {
+  flex: 1;
+  padding: var(--pd-3);
+  position: relative;
+}
+
+.about__img--blur{
+  filter: blur(50px);
+  opacity: 0.3;
+  position: absolute;
+  z-index: -1;
+}
+
+.about__info {
+  flex: 2;
+  flex-direction: column;
+  padding: var(--pd-2) var(--pd-3);
+  text-align: start;
+  justify-content: center;
+  background-color: #2834458f;
+  border-radius: 8px;
+  transform: translateY(20px);
+}
+
+.about__title {
+  font-size: var(--fs-5);
+  color: var(--secondary-clr);
+  margin-bottom: 15px;
+}
+
+.about__text {
+  font-size: var(--fs-1);
+  color: var(--text-clr);
+  line-height: 1.75rem;
+}

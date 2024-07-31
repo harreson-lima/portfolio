@@ -8,6 +8,7 @@ const gameOverEle = document.querySelector(".game_over")
 const controlsEle = document.querySelector(".controls")
 const restartEle = document.querySelector(".restart")
 
+const foodAudio = new Audio("../Assets/food.wav");
 
 let gameOver = false
 let playing = false;
@@ -42,6 +43,7 @@ function initGame() {
   htmlMarkup = createElement(foodX, foodY, "game__board__food");
 
   if (snakeX === foodX && snakeY === foodY) {
+    foodAudio.play();
     changeFoodPosition();
     snakeBody.push([foodX, foodY]);
     updateScore();
@@ -80,13 +82,15 @@ function initGame() {
 }
 
 function changeDirection(e) {
+
+  const key = e.key;
   
-  if (e.key === "Enter" && gameOver) {
+  if (key === "Enter" && gameOver) {
     restartGame();
     return;
   }
 
-  if (e.key === "Enter" && !playing) {
+  if (key === "Enter" && !playing) {
     playing = true;
     startGame();
     return;
@@ -98,25 +102,39 @@ function changeDirection(e) {
     e.preventDefault();
   }
 
-  if ((e.key === "w" || e.key === "ArrowUp") && velocityY !== 1) {
+  if ((key === "w" || key === "W" || key === "ArrowUp") && 
+    velocityY !== 1) 
+  {
     velocityX = 0;
     velocityY = -1;
-  } else if ((e.key === "s" || e.key === "ArrowDown") && velocityY !== -1) {
+  } else if ((key === "s" || key === "S"|| key === "ArrowDown") && 
+    velocityY !== -1) 
+  {
     velocityX = 0;
     velocityY = 1;
-  } else if ((e.key === "a" || e.key === "ArrowLeft") && velocityX !== 1) {
+  } else if (
+    (key === "a" || key === "A" || key === "ArrowLeft") &&
+    velocityX !== 1) 
+  {
     velocityX = -1;
     velocityY = 0;
-  } else if ((e.key === "d" || e.key === "ArrowRight") && velocityX !== -1) {
+  } else if (
+    (key === "d" || key === "D" || key === "ArrowRight") &&
+    velocityX !== -1) 
+  {
     velocityX = 1;
     velocityY = 0;
   }
-  console.log(e.key)
 }
 
 function changeFoodPosition() {
   foodX = Math.floor(Math.random() * 30) + 1;
   foodY = Math.floor(Math.random() * 30) + 1;
+
+  snakeBody.forEach(dot => {
+    if (foodX === dot[0] && foodY === dot[1])
+      changeDirection();
+  })
 }
 
 function updateScore() {
