@@ -6,7 +6,7 @@
   --secondary-clr: #00ABEF;
   --accent-clr: #FF6746;
   --text-clr: #FAFAFA;
-  --dark-text-clr: #a3a2b8;
+  --dark-text-clr: #bdbcd3;
   --game-board-clr: #86c06c;
   --food-clr: #306850;
   --snake-clr: #071821;
@@ -381,34 +381,34 @@ a {
 }
 
 .skills__group {
-  /* border: 2px solid rgba(255, 255, 255, 0.1); */
-  /* background: rgba(255, 255, 255, 0.1); */
-  /* border-radius: 8px; */
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-  /* backdrop-filter: blur(10px); */
-  /* -webkit-backdrop-filter: blur(10px); */
-  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: var(--pd-1);
   max-width: 1200px;
-  margin: 0 auto;
+  margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%),1fr));
   align-items: start;
-  gap: 20px;
+  gap: var(--pd-1);
   text-align: center;
 }
 
 .skill__card {
+  min-height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 4px;
-  min-height: 100%;
+}
+
+.skill__card:first-child{
+  grid-row: span 2;
 }
 
 .skill__card__title {
@@ -416,13 +416,12 @@ a {
   padding-block: var(--pd-1);
   color: var(--text-clr);
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px 4px 0 0;
+  border-radius: 6px 6px 0 0;
   width: 100%;
 }
 
 .skill__card__info {
   flex: 1;
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -432,13 +431,12 @@ a {
 
 .tech {
   min-width: 100px;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5px;
 }
 
-.front {
-  grid-row: span 2;
+.tech__name {
+  color: var(--dark-text-clr);
 }
