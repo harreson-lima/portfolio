@@ -204,6 +204,7 @@ a {
   min-width: 200px;
   padding: var(--fs-1) var(--pd-2);
   background-color: var(--btn-clr);
+  border: none;
   overflow: hidden;
   transition: color 0.3s;
 }
@@ -254,6 +255,7 @@ a {
   width: fit-content;
   height: fit-content;
   background-color: var(--game-box-clr);
+  filter: drop-shadow(0 0 8mm rgba(108, 199, 81, 0.2));
   border-radius: 5px;
   overflow: hidden;  
   position: relative;
@@ -439,4 +441,42 @@ a {
 
 .tech__name {
   color: var(--dark-text-clr);
+}
+
+
+
+/* contact section */
+
+.contact {
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__btn {
+  padding: var(--pd-3) var(--pd-4);
+  cursor: pointer;
+}
+
+.contact__btn:hover::before {
+  width: 1500px;
+  height: 1500px;
+}
+
+
+/* footer */
+
+footer {
+  background-color: var(--btn-clr);
+  color: var(--text-clr);
+  min-height: 10rem;
+  padding: var(--pd-2);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+footer a {
+  color: var(--accent-clr);
+  font-weight: bold;
 }

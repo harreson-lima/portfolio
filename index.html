@@ -4,10 +4,13 @@
     <title>Harreson Lima</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./Assets/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="./Assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="css/style.css" />
     <script src="./js/buttons.js" defer></script>
     <script src="./js/snake.js" defer></script>
+    <script src="./js/contact.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
     <script
       src="https://kit.fontawesome.com/323c990d78.js"
       crossorigin="anonymous"
@@ -27,26 +30,38 @@
           </ul>
         </nav>
 
-        <a class="language flex" href="./Pages/english-version.html" title="English Version">
+        <a
+          class="language flex"
+          href="./Pages/english-version.html"
+          title="English Version"
+        >
           <i class="fa-solid fa-earth-americas"></i>
           <span>English</span>
         </a>
       </header>
 
       <section class="hero flex min_height">
-       
         <div class="hero__info flex">
           <h1 class="hero__info__title">Olá, eu sou Harreson Lima</h1>
           <h2 class="hero__info__subtitle titles">Desenvolvedor Front-End</h2>
           <p class="hero__info__text">
-            Meu sonho é usar a tecnologia para desenvolver novas soluções 
-            e experiências que proporcionem impactos positivos na vida das pessoas, assim como foi na minha.
+            Meu sonho é usar a tecnologia para desenvolver novas soluções e
+            experiências que proporcionem impactos positivos na vida das
+            pessoas, assim como foi na minha.
           </p>
           <div class="hero__info__btns flex">
-            <a href="https://github.com/harreson-lima" target="_blank" class="btn">
+            <a
+              href="https://github.com/harreson-lima"
+              target="_blank"
+              class="btn"
+            >
               <span><i class="fa-brands fa-github"></i> GitHub</span>
             </a>
-            <a href="https://www.linkedin.com/in/harresonlima/" target="_blank" class="btn">
+            <a
+              href="https://www.linkedin.com/in/harresonlima/"
+              target="_blank"
+              class="btn"
+            >
               <span><i class="fa-brands fa-linkedin"></i> LinkedIn</span>
             </a>
           </div>
@@ -54,55 +69,77 @@
 
         <div class="hero__game flex">
           <div class="game__wrapper">
-            <img src="./Assets/Logo.png" loading="lazy" class="game__logo absolute" alt="">
-            <img src="./Assets/Command.png" loading="lazy" class="absolute animate_fade start" alt="">
-            <img src="./Assets/GameOver.png" loading="lazy" class="absolute game_over" alt="">
-            <img src="./Assets/Controls.png" loading="lazy" class="absolute animate_fade controls" alt="">
-            <img src="./Assets/Restart.png" loading="lazy" class="absolute animate_fade restart" alt="">
+            <img
+              src="./Assets/Logo.png"
+              loading="lazy"
+              class="game__logo absolute"
+              alt=""
+            />
+            <img
+              src="./Assets/Command.png"
+              loading="lazy"
+              class="absolute animate_fade start"
+              alt=""
+            />
+            <img
+              src="./Assets/GameOver.png"
+              loading="lazy"
+              class="absolute game_over"
+              alt=""
+            />
+            <img
+              src="./Assets/Controls.png"
+              loading="lazy"
+              class="absolute animate_fade controls"
+              alt=""
+            />
+            <img
+              src="./Assets/Restart.png"
+              loading="lazy"
+              class="absolute animate_fade restart"
+              alt=""
+            />
 
             <div class="game__details flex">
               <span class="score">Score: 0</span>
               <span class="high_score">High Score: 30</span>
             </div>
-            <div class="game__board">
-
-            </div>
+            <div class="game__board"></div>
           </div>
         </div>
-
       </section>
 
       <section id="about" class="about min_height flex">
-        
         <div class="about__img">
           <img
             src="./Assets/3d-business-man-with-glasses-pointing-finger-up.png"
             alt="guy lifting right hand"
             class="about__img--blur"
-          />  
+          />
           <img
             src="./Assets/3d-business-man-with-glasses-pointing-finger-up.png"
             alt="guy lifting right hand"
-          />  
+          />
         </div>
-        
+
         <div class="about__info flex">
           <h2 class="about__title titles">Sobre mim...</h2>
-          <p class="about__text">Meu primeiro contato com a tecnologia foi com 
-            o jogo de celular Snake. Eu passava horas jogando no celular da minha 
-            avó. Desde então, percebi que queria trabalhar com tecnologia, levando 
-            aqueles momentos de diversão para mais pessoas. Atualmente, atuo como 
-            desenvolvedor front-end, criando novas experiências que impactem a vida 
-            das pessoas.
+          <p class="about__text">
+            Meu primeiro contato com a tecnologia foi com o jogo de celular
+            Snake. Eu passava horas jogando no celular da minha avó. Desde
+            então, percebi que queria trabalhar com tecnologia, levando aqueles
+            momentos de diversão para mais pessoas. Atualmente, atuo como
+            desenvolvedor front-end, criando novas experiências que impactem a
+            vida das pessoas.
           </p>
-          <p class="about__text">Além disso, gosto de explorar outros segmentos, como criação 
-            de jogos, e futuramente desenvolvimento mobile, quem sabe até robótica. 
-            Como bom brasileiro, acredito que nenhum sonho é impossível quando há 
-            dedicação e resiliência. É por isso que cada nova linha de código escrita, sei que 
-            estou um passo mais próximo do meu sonho.
+          <p class="about__text">
+            Além disso, gosto de explorar outros segmentos, como criação de
+            jogos, e futuramente desenvolvimento mobile, quem sabe até robótica.
+            Como bom brasileiro, acredito que nenhum sonho é impossível quando
+            há dedicação e resiliência. É por isso que cada nova linha de código
+            escrita, sei que estou um passo mais próximo do meu sonho.
           </p>
         </div>
-      
       </section>
 
       <section id="skills" class="skills min_height">
@@ -110,89 +147,160 @@
         <div class="skills__group">
           <div class="skill__card flex">
             <h3 class="skill__card__title">Front-End</h3>
-            <div class="skill__card__info flex"> 
+            <div class="skill__card__info flex">
               <div class="tech flex" title="html">
-                <img src="./Assets/skills_icons/html.svg" loading="lazy" width="70px" alt="html">
+                <img
+                  src="./Assets/skills_icons/html.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="html"
+                />
                 <span class="tech__name">HTML</span>
               </div>
               <div class="tech flex" title="css">
-                <img src="./Assets/skills_icons/css.svg" loading="lazy" width="70px" alt="">
+                <img
+                  src="./Assets/skills_icons/css.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt=""
+                />
                 <span class="tech__name">CSS</span>
               </div>
               <div class="tech flex" title="javascript">
-                <img src="./Assets/skills_icons/js.svg" loading="lazy" width="70px" alt="">
+                <img
+                  src="./Assets/skills_icons/js.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt=""
+                />
                 <span class="tech__name">JavaScript</span>
               </div>
               <div class="tech flex" title="react">
-                <img src="./Assets/skills_icons/reactjs.svg" loading="lazy" width="70px" alt="">
+                <img
+                  src="./Assets/skills_icons/reactjs.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt=""
+                />
                 <span class="tech__name">React</span>
               </div>
               <div class="tech flex" title="typescript">
-                <img src="./Assets/skills_icons/typescript.svg" loading="lazy" width="70px" alt="">
+                <img
+                  src="./Assets/skills_icons/typescript.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt=""
+                />
                 <span class="tech__name">TypeScript</span>
               </div>
               <div class="tech flex" title="tailwind">
-                <img src="./Assets/skills_icons/tailwind.svg" loading="lazy" width="70px" alt="">
+                <img
+                  src="./Assets/skills_icons/tailwind.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt=""
+                />
                 <span class="tech__name">Tailwind</span>
               </div>
               <div class="tech flex" title="vite">
-                <img src="./Assets/skills_icons/vite.svg" loading="lazy" width="70px" alt="">
+                <img
+                  src="./Assets/skills_icons/vite.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt=""
+                />
                 <span class="tech__name">Vite</span>
               </div>
-          </div>     
+            </div>
           </div>
           <div class="skill__card flex">
             <h3 class="skill__card__title">Back-End</h3>
-            <div class="skill__card__info flex"> 
+            <div class="skill__card__info flex">
               <div class="tech flex" title="firebase">
-                <img src="./Assets/skills_icons/firebase.svg" loading="lazy" width="70px" alt="html">
+                <img
+                  src="./Assets/skills_icons/firebase.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="html"
+                />
                 <span class="tech__name">FireBase</span>
               </div>
               <div class="tech flex" title="sql">
-                <img src="./Assets/skills_icons/sql.svg" loading="lazy" width="70px" alt="">
+                <img
+                  src="./Assets/skills_icons/sql.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt=""
+                />
                 <span class="tech__name">SQL</span>
               </div>
             </div>
-            
           </div>
           <div class="skill__card flex">
-            <h3 class="skill__card__title">Controle de versão</h3>        
-            <div class="skill__card__info flex"> 
+            <h3 class="skill__card__title">Controle de versão</h3>
+            <div class="skill__card__info flex">
               <div class="tech flex" title="git">
-                <img src="./Assets/skills_icons/git.svg" loading="lazy" width="70px" alt="html">
+                <img
+                  src="./Assets/skills_icons/git.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="html"
+                />
                 <span class="tech__name">Git</span>
               </div>
               <div class="tech flex" title="github">
-                <img src="./Assets/skills_icons/github.svg" loading="lazy" width="70px" alt="html">
+                <img
+                  src="./Assets/skills_icons/github.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="html"
+                />
                 <span class="tech__name">GitHub</span>
               </div>
-
             </div>
-            
           </div>
           <div class="skill__card flex">
-            <h3 class="skill__card__title">Teste</h3>           
-            <div class="skill__card__info flex"> 
+            <h3 class="skill__card__title">Teste</h3>
+            <div class="skill__card__info flex">
               <div class="tech flex" title="jest">
-                <img src="./Assets/skills_icons/jest.svg" loading="lazy" width="70px" alt="html">
+                <img
+                  src="./Assets/skills_icons/jest.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="html"
+                />
                 <span class="tech__name">Jest</span>
               </div>
               <div class="tech flex" title="cypress">
-                <img src="./Assets/skills_icons/cypress.svg" loading="lazy" width="70px" alt="html">
+                <img
+                  src="./Assets/skills_icons/cypress.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="html"
+                />
                 <span class="tech__name">Cypress</span>
               </div>
             </div>
-            
           </div>
           <div class="skill__card flex">
             <h3 class="skill__card__title">Desenvolvimento de jogos</h3>
-            <div class="skill__card__info flex"> 
+            <div class="skill__card__info flex">
               <div class="tech flex" title="c-sharp">
-                <img src="./Assets/skills_icons/csharp.svg" loading="lazy" width="70px" alt="html">
+                <img
+                  src="./Assets/skills_icons/csharp.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="html"
+                />
                 <span class="tech__name">C#</span>
               </div>
               <div class="tech flex" title="unity">
-                <img src="./Assets/skills_icons/unity-3d.svg" loading="lazy" width="70px" alt="">
+                <img
+                  src="./Assets/skills_icons/unity-3d.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt=""
+                />
                 <span class="tech__name">Unity</span>
               </div>
             </div>
@@ -200,16 +308,23 @@
         </div>
       </section>
 
-      <section class="projetos min_height"></section>
+      <section class="projetcs min_height"></section>
 
-      <section class="contato min_height"></section>
+      <section id="contact" class="contact min_height flex">
+        <button class="btn contact__btn"><span>contatoharresonlima@gmail.com</span></button>
+      </section>
 
-      <footer>
-        Illustration by
+      <footer class="flex">
+        <div class="copy">
+          Copyright &copy Harreson Lima 2024
+        </div>
+        <div class="att">
+          Illustration by
         <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
           >Icons 8</a
         >
         from <a href="https://icons8.com/illustrations">Ouch!</a>
+        </div>
       </footer>
     </div>
   </body>
