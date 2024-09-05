@@ -86,7 +86,7 @@ a {
 }
 
 .titles {
-  font-size: var(--fs-5);
+  font-size: var(--fs-6);
   color: var(--secondary-clr);
 }
 
@@ -405,12 +405,12 @@ a {
 .skills__group {
   border-radius: 8px;
   padding: var(--pd-1);
-  max-width: 1200px;
+  max-width: 1300px;
   margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%),1fr));
   align-items: start;
-  gap: var(--pd-1);
+  gap: var(--pd-3);
   text-align: center;
 }
 
@@ -445,7 +445,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: var(--pd-3);
-  padding: var(--pd-3) var(--pd-1);
+  padding: var(--pd-4) var(--pd-1);
 }
 
 .tech {
@@ -469,18 +469,17 @@ a {
 
 .projects_cards {
   position: relative;
-  max-width: 1200px;
+  max-width: 1300px;
   margin-inline: auto;
   padding: var(--pd-1);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(500px,100%),1fr));
-  gap: var(--pd-1);
+  grid-template-columns: repeat(auto-fit, minmax(min(450px,100%),1fr));
+  gap: var(--pd-3);
 }
 
 .project_card {
   border-radius: 16px;
-  padding: var(--pd-3);
-  display: flex;
+  padding: var(--pd-2);
   flex-direction: column;
   align-items: flex-start;
   gap: var(--pd-3);
@@ -495,11 +494,52 @@ a {
   border-radius: 8px;
 }
 
+.project_card__tags {
+  gap: 10px;
+}
+
+.tag {
+  /* border-radius: 6px; */
+  /* border: 1px solid var(--primary-clr); */
+  /* color: var(--primary-clr);
+  font-weight: bold;
+  padding: calc(var(--pd-1) / 2) calc(var(--pd-3) / 2);
+  background-color: var(--secondary-clr);
+  box-shadow: 5px 5px 10px #00000055; */
+  width: 40px;
+}
+
 .project_card__info {
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--pd-3);
+  gap: var(--pd-1);
+  color: var(--dark-text-clr );
+}
+
+.info__title {
+  font-size: var(--fs-4);
+}
+
+.project_card__btns {
+  justify-content: center;
+  align-items: center;
+  gap: var(--pd-2);
+  width: 100%;
+}
+
+.card__btn {
+  flex: 1;
+  border-radius: 6px;
+  padding: 1em 1.5em;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-2);
+  color: var(--text-clr);
+}
+
+.card__btn img {
+  width: 30px;
 }
 
 
