@@ -15,6 +15,7 @@
     <script src="./js/snake.js" defer></script>
     <script src="./js/contact.js" defer></script>
     <script src="./js/menu.js" defer></script>
+    <script src="./js/upButton.js" defer></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
@@ -39,14 +40,11 @@
           </ul>
         </nav>
 
-        <a
-          class="language flex"
-          href="./Pages/english-version.html"
-          title="English Version"
-        >
-          <i class="fa-solid fa-earth-americas"></i>
-          <span>English</span>
-        </a>
+        <div class="language">
+          <a href="#">
+            <img src="./Assets/flags/united-states.svg" width="35px" alt="">
+          </a>
+        </div>
 
         <button
             class="hamburger"
@@ -84,6 +82,7 @@
         </div>
 
         <div class="hero__game flex">
+          <audio class="snake_sound" src="./Assets/sound/food.wav"></audio>
           <div class="game__wrapper">
             <img
               src="./Assets/Logo.png"
@@ -287,14 +286,14 @@
                 />
                 <span class="tech__name">Jest</span>
               </div>
-              <div class="tech flex" title="cypress">
+              <div class="tech flex" title="testing library">
                 <img
-                  src="./Assets/skills_icons/cypress.svg"
+                  src="./Assets/skills_icons/octopus.svg"
                   loading="lazy"
                   width="70px"
                   alt="html"
                 />
-                <span class="tech__name">Cypress</span>
+                <span class="tech__name">Testing Library</span>
               </div>
             </div>
           </div>
@@ -494,9 +493,13 @@
 
       <section id="contact" class="contact min_height flex">
         <button class="btn contact__btn">
-          <span>contatoharresonlima@gmail.com</span>
+          <span>Copiar email de contato</span>
         </button>
       </section>
+
+      <button class="go_up">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
 
     </div>
     <footer class="flex">

@@ -1,3 +1,4 @@
+const snakeSound = document.querySelector(".snake_sound")
 const gameBoard = document.querySelector(".game__board");
 const scoreEle = document.querySelector(".score");
 const highScoreEle = document.querySelector(".high_score");
@@ -7,8 +8,6 @@ const startEle = document.querySelector(".start");
 const gameOverEle = document.querySelector(".game_over")
 const controlsEle = document.querySelector(".controls")
 const restartEle = document.querySelector(".restart")
-
-const foodAudio = new Audio("../Assets/food.wav");
 
 let gameOver = false
 let playing = false;
@@ -43,7 +42,7 @@ function initGame() {
   htmlMarkup = createElement(foodX, foodY, "game__board__food");
 
   if (snakeX === foodX && snakeY === foodY) {
-    foodAudio.play();
+    snakeSound.play();
     changeFoodPosition();
     snakeBody.push([foodX, foodY]);
     updateScore();
