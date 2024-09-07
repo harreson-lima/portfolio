@@ -727,6 +727,6 @@ footer a {
   }
 
   .hamburger[aria-expanded="true"] {
-    background-image: url("../assets/close.svg");
+    background-image: url("../Assets/close.svg");
   }
 }
