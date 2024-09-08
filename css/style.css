@@ -18,9 +18,7 @@
   --fs-4: 2rem;
   --fs-5: 2.5rem;
   --fs-6: 2.75rem;
-  --fs-7: 3rem;
-  --fs-8: 3.5rem;
-  --fs-9: 4.5rem;
+  --fs-7: 4.5rem;
 
   --pd-1: 1rem;
   --pd-2: 1.5rem;
@@ -174,6 +172,13 @@ a {
   color: var(--secondary-clr);
 }
 
+.hamburger {
+  display: none;
+  z-index: 99999999999;
+  cursor: pointer;
+}
+
+
 
 /* hero section */
 
@@ -187,7 +192,7 @@ a {
 }
 
 .hero__info__title {
-  font-size: var(--fs-9);
+  font-size: var(--fs-7);
   line-height: 5.5rem;
   margin-bottom: 5px;
 }
@@ -371,7 +376,7 @@ a {
   padding: var(--pd-2) var(--pd-3);
   text-align: start;
   justify-content: center;
-  background-color: #2834458f;
+  background-color: var(--btn-clr);
   border-radius: 8px;
   transform: translateY(20px);
 }
@@ -485,13 +490,6 @@ a {
 }
 
 .tag {
-  /* border-radius: 6px; */
-  /* border: 1px solid var(--primary-clr); */
-  /* color: var(--primary-clr);
-  font-weight: bold;
-  padding: calc(var(--pd-1) / 2) calc(var(--pd-3) / 2);
-  background-color: var(--secondary-clr);
-  box-shadow: 5px 5px 10px #00000055; */
   width: 40px;
 }
 
@@ -583,38 +581,30 @@ footer a {
   border: none;
   border-radius: 50px;
   font-weight: bold;
-  text-align: center;
   cursor: pointer;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 62.5rem){
   .about {
     flex-direction: column;
-  }
-
-  .hero {
-    max-width: 100%;
   }
 
   .projects_cards,
   .skills__group {
     padding-inline: 0;
   }
-  
 
   .hero__game {
     display: none;
   }
 }
 
-
-.hamburger {
-  display: none;
-  z-index: 99999999999;
-}
-
 @media screen and (max-width: 46rem) {
 
+  .container {
+    padding-inline: var(--pd-1);
+    width: 100vw;
+  }
   .navigation {
     z-index: 100;
     position: fixed;
@@ -628,23 +618,37 @@ footer a {
     transition: transform 0.3s ease-in;
   }
 
-  .btn::before {
-    display: none;
+   .navigation li {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
   }
 
-  .btn:hover {
-    color: var(--secondary-clr);
+  .naviagtion__item {
+    display: block;
   }
 
-  .about {
-    padding: 0;
+  .expand {
+    transform: translateX(0%);
   }
 
-  .container {
-    padding-inline: var(--pd-1);
-    width: 100vw;
+  .hamburger {
+    display: block;
+    background-color: transparent;
+    border: none;
+    background-image: url("../Assets/menu.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 2rem;
+    aspect-ratio: 1; 
+    margin-right: 15px;
   }
 
+  .hamburger[aria-expanded="true"] {
+    background-image: url("../Assets/close.svg");
+  }
+  
   .language {
     position: fixed;
     bottom: 20px;
@@ -662,18 +666,29 @@ footer a {
   .language a {
     height: 35px;
   }
-
-  .contact__btn {
-    max-width: 100%;
-    font-size: var(--fs-1);
-    padding: var(--pd-1) var(--pd-2);
-    text-wrap: wrap;
-  }
+   
   .hero__info__title {
     font-size: var(--fs-5);
   }
+
   .hero__info__subtitle {
     font-size: var(--fs-4);
+  }
+
+  .hero__info__btns {
+    flex-direction: column;
+  }
+
+  .btn::before {
+    display: none;
+  }
+
+  .btn:hover {
+    color: var(--secondary-clr);
+  }
+
+  .about {
+    padding: 0;
   }
 
   .project_card__btns {
@@ -684,49 +699,14 @@ footer a {
     min-width: 100%;
   }
 
-  /* .about__img img {
+  .contact__btn {
     max-width: 100%;
-  } */
-
-  .contact__btn span {
+    font-size: var(--fs-1);
+    padding: var(--pd-1) var(--pd-2);
     text-wrap: wrap;
   }
-
-  .hero__info__btns {
-    flex-direction: column;
-  }
-
-  .expand {
-    transform: translateX(0%);
-  }
-
-  .navigation li {
-    width: 100%;
-    text-align: center;
-    font-weight: 700;
-  }
-
-  .naviagtion__item {
-    display: block;
-  }
-
-  .hamburger {
-    /* position: absolute;
-    top: 1.5rem;
-    right: 1.5rem; */
-    /* width: 100px; */
-    display: block;
-    background-color: transparent;
-    border: none;
-    background-image: url("../Assets/menu.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 2rem;
-    aspect-ratio: 1;
-  }
-
-  .hamburger[aria-expanded="true"] {
-    background-image: url("../Assets/close.svg");
+ 
+  .contact__btn span {
+    text-wrap: wrap;
   }
 }

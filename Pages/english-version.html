@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Harreson Lima</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harreson Lima</title>
+    <link rel="shortcut icon" href="../Assets/favicon.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <script src="../js/buttons.js" defer></script>
     <script src="../js/snake.js" defer></script>
+    <script src="../js/contact.js" defer></script>
+    <script src="../js/menu.js" defer></script>
+    <script src="../js/upButton.js" defer></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+      defer
+    ></script>
     <script
       src="https://kit.fontawesome.com/323c990d78.js"
       crossorigin="anonymous"
@@ -19,72 +33,493 @@
 
         <nav>
           <ul class="navigation flex">
-            <li class="naviagtion__item"><a href="#sobre">About</a></li>
-            <li class="naviagtion__item"><a href="#sobre">Habilidades</a></li>
-            <li class="naviagtion__item"><a href="#sobre">Projetos</a></li>
-            <li class="naviagtion__item"><a href="#sobre">Contato</a></li>
+            <li class="naviagtion__item"><a href="#about">About</a></li>
+            <li class="naviagtion__item"><a href="#skills">Skills</a></li>
+            <li class="naviagtion__item"><a href="#projects">Projects</a></li>
+            <li class="naviagtion__item"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 
-        <a class="language flex" href="../index.html" title="English Version">
-          <i class="fa-solid fa-earth-americas"></i>
-          <span>PT-BR</span>
-        </a>
-      </header>
+        <div class="language flex">
+          <a href="../index.html">
+            <img src="../Assets/flags/brazil.svg" width="35px" alt="brazil flags">
+          </a>
+        </div>
 
+        <button
+            class="hamburger"
+            data-visible="false"
+            aria-controls="primary-nav"
+            aria-expanded="false">
+        </button>
+      </header>
       <section class="hero flex min_height">
-       
         <div class="hero__info flex">
-          <h1 class="hero__info__title">Olá, eu sou Harreson Lima</h1>
-          <h2 class="hero__info__subtitle">Desenvolvedor Front-End</h2>
+          <h1 class="hero__info__title">Harreson Lima</h1>
+          <h2 class="hero__info__subtitle titles">Front-End Developer</h2>
           <p class="hero__info__text">
-            Meu sonho é usar a tecnologia para desenvolver novas soluções 
-            e experiências que proporcionem impactos positivos na vida das pessoas, assim como foi na minha.
+            I dream about using technology to develop new solutions and 
+            experiences that provide positive impacts on people's lives, 
+            just like it did in mine.
           </p>
           <div class="hero__info__btns flex">
-            <a href="https://github.com/harreson-lima" target="_blank" class="btn">
+            <a
+              href="https://github.com/harreson-lima"
+              target="_blank"
+              class="btn"
+            >
               <span><i class="fa-brands fa-github"></i> GitHub</span>
             </a>
-            <a href="https://www.linkedin.com/in/harresonlima/" target="_blank" class="btn">
+            <a
+              href="https://www.linkedin.com/in/harresonlima/"
+              target="_blank"
+              class="btn"
+            >
               <span><i class="fa-brands fa-linkedin"></i> LinkedIn</span>
             </a>
           </div>
         </div>
 
         <div class="hero__game flex">
+          <audio class="snake_sound" src="../Assets/sound/food.wav"></audio>
           <div class="game__wrapper">
-            <img src="../Assets/Logo.png" class="game__logo" alt="">
-            <img src="../Assets/Command2.png" class="command" alt="">
+            <img
+              src="../Assets/Logo.png"
+              loading="lazy"
+              class="game__logo absolute"
+              alt="game logo"
+            />
+            <img
+              src="../Assets/Command2.png"
+              loading="lazy"
+              class="absolute animate_fade start"
+              alt="game instructions"
+            />
+            <img
+              src="../Assets/GameOver.png"
+              loading="lazy"
+              class="absolute game_over"
+              alt="game over"
+            />
+            <img
+              src="../Assets/Controls2.png"
+              loading="lazy"
+              class="absolute animate_fade controls"
+              alt="controls"
+            />
+            <img
+              src="../Assets/Restar2.png"
+              loading="lazy"
+              class="absolute animate_fade restart"
+              alt="restart"
+            />
+
             <div class="game__details flex">
               <span class="score">Score: 0</span>
               <span class="high_score">High Score: 30</span>
             </div>
-            <div class="game__board">
+            <div class="game__board"></div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about min_height flex">
+        <div class="about__img">
+          <img
+            src="../Assets/3d-business-man-with-glasses-pointing-finger-up.png"
+            alt="guy lifting right hand"
+            class="about__img--blur"
+          />
+          <img
+            src="../Assets/3d-business-man-with-glasses-pointing-finger-up.png"
+            alt="guy lifting right hand"
+          />
+        </div>
 
+        <div class="about__info flex">
+          <h2 class="about__title titles">About me...</h2>
+          <p class="about__text">
+            My first contact with technology was with the mobile game Snake. 
+            I spent hours playing that game on my grandmother's phone. Since then, 
+            I realized that I wanted to work with technology, bringing those fun moments 
+            to more people.
+          </p>
+          <p class="about__text">
+            Furthermore, I like to explore other segments, such as
+            game development, mobile development, and maybe even robotics in the future.
+            As a good Brazilian, I believe that no dream is impossible when
+            there is dedication and resilience. That's why every new line of code
+            writed, I know I'm one step closer to my dream.
+          </p>
+        </div>
+      </section>
+      <section id="skills" class="skills min_height">
+        <h2 class="skills__title titles">Skills</h2>
+        <div class="skills__group">
+          <div class="skill__card flex glassmorphism">
+            <h3 class="skill__card__title glassmorphism">Front-End</h3>
+            <div class="skill__card__info flex">
+              <div class="tech flex" title="html">
+                <img
+                  src="../Assets/skills_icons/html.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="html"
+                />
+                <span class="tech__name">HTML</span>
+              </div>
+              <div class="tech flex" title="css">
+                <img
+                  src="../Assets/skills_icons/css.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="css"
+                />
+                <span class="tech__name">CSS</span>
+              </div>
+              <div class="tech flex" title="javascript">
+                <img
+                  src="../Assets/skills_icons/js.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="javascript"
+                />
+                <span class="tech__name">JavaScript</span>
+              </div>
+              <div class="tech flex" title="react">
+                <img
+                  src="../Assets/skills_icons/reactjs.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="react"
+                />
+                <span class="tech__name">React</span>
+              </div>
+              <div class="tech flex" title="typescript">
+                <img
+                  src="../Assets/skills_icons/typescript.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="typescript"
+                />
+                <span class="tech__name">TypeScript</span>
+              </div>
+              <div class="tech flex" title="tailwind">
+                <img
+                  src="../Assets/skills_icons/tailwind.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="tailwind"
+                />
+                <span class="tech__name">Tailwind</span>
+              </div>
+              <div class="tech flex" title="vite">
+                <img
+                  src="../Assets/skills_icons/vite.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="vite"
+                />
+                <span class="tech__name">Vite</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill__card flex glassmorphism">
+            <h3 class="skill__card__title glassmorphism">Back-End</h3>
+            <div class="skill__card__info flex">
+              <div class="tech flex" title="firebase">
+                <img
+                  src="../Assets/skills_icons/firebase.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="firebase"
+                />
+                <span class="tech__name">FireBase</span>
+              </div>
+              <div class="tech flex" title="sql">
+                <img
+                  src="../Assets/skills_icons/sql.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="sql"
+                />
+                <span class="tech__name">SQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill__card flex glassmorphism">
+            <h3 class="skill__card__title glassmorphism">Version Control</h3>
+            <div class="skill__card__info flex">
+              <div class="tech flex" title="git">
+                <img
+                  src="../Assets/skills_icons/git.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="git"
+                />
+                <span class="tech__name">Git</span>
+              </div>
+              <div class="tech flex" title="github">
+                <img
+                  src="../Assets/skills_icons/github.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="github"
+                />
+                <span class="tech__name">GitHub</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill__card flex glassmorphism">
+            <h3 class="skill__card__title glassmorphism">Testing</h3>
+            <div class="skill__card__info flex">
+              <div class="tech flex" title="jest">
+                <img
+                  src="../Assets/skills_icons/jest.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="jest"
+                />
+                <span class="tech__name">Jest</span>
+              </div>
+              <div class="tech flex" title="testing library">
+                <img
+                  src="../Assets/skills_icons/octopus.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="octopus"
+                />
+                <span class="tech__name">Testing Library</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill__card flex glassmorphism">
+            <h3 class="skill__card__title glassmorphism">Game development</h3>
+            <div class="skill__card__info flex">
+              <div class="tech flex" title="c-sharp">
+                <img
+                  src="../Assets/skills_icons/csharp.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="c-sharp"
+                />
+                <span class="tech__name">C#</span>
+              </div>
+              <div class="tech flex" title="unity">
+                <img
+                  src="../Assets/skills_icons/unity-3d.svg"
+                  loading="lazy"
+                  width="70px"
+                  alt="unity"
+                />
+                <span class="tech__name">Unity</span>
+              </div>
             </div>
           </div>
         </div>
-
       </section>
+      <section id="projects" class="projetcs min_height">
+        <h2 class="projects__title titles">Projects</h2>
 
-      <section id="sobre" class="sobre min_height">
-        <img
-          src="../Assets/3d-business-man-with-glasses-pointing-finger-up.png"
-          alt=""
-        />
+        <div class="projects_cards">
+
+          <div class="project_card flex glassmorphism">
+            <div class="project_card__img">
+              <img src="../Assets/projects/harreson-lima.github.io_Weather-Bento_.png" 
+                loading="lazy" alt="project image">
+            </div>
+            <div class="project_card__tags flex">
+              <img class="tag" loading="lazy" src="../Assets/tags/tag-html.svg" alt="icon">
+              <img class="tag" loading="lazy" src="../Assets/tags/tag-css.svg" alt="icon">
+              <img class="tag" loading="lazy" src="../Assets/tags/tag-javascript.svg" alt="icon">
+              <img class="tag" loading="lazy" src="../Assets/tags/tag-react.svg" alt="icon">
+              <img class="tag" loading="lazy" src="../Assets/tags/tag-git.svg" alt="icon">
+            </div>
+            <div class="project_card__info flex">
+              <h3 class="info__title">
+                Weather Bento
+              </h3>
+              <p class="info__description">
+               <strong>Description:</strong> Minimalist weather forecast app inspired by the 
+               design of Japanese bento boxes. Developed in <strong>React</strong> with 
+               <strong>Vite</strong>, the app provides 
+               weather forecasts using the <strong>OpenWeatherApi Api</strong>.
+              </p>
+            </div>
+            <div class="project_card__btns flex">
+              <a href="https://harreson-lima.github.io/Weather-Bento/" target="_blank" 
+                class="card__btn glassmorphism flex">
+                <img src="../Assets/open-icon.svg" loading="lazy" alt="icon">
+                <span>Demo</span>
+              </a>
+              <a href="https://github.com/harreson-lima/Weather-Bento" target="_blank" 
+                class="card__btn glassmorphism flex">
+                <img src="../Assets/github-icon.svg" loading="lazy" alt="icon">
+                <span>Repo</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project_card flex glassmorphism">
+            <div class="project_card__img">
+              <img src="../Assets/projects/harreson-lima.github.io_voice-wave_.png" 
+                loading="lazy" alt="project image">
+            </div>
+            <div class="project_card__tags flex">
+              <img class="tag" src="../Assets/tags/tag-html.svg" alt="icon">
+              <img class="tag" src="../Assets/tags/tag-css.svg" alt="icon">
+              <img class="tag" src="../Assets/tags/tag-javascript.svg" alt="icon">
+              <img class="tag" src="../Assets/tags/tag-git.svg" alt="icon">
+            </div>
+            <div class="project_card__info flex">
+              <h3 class="info__title">
+                Voice Wave
+              </h3>
+              <p class="info__description">
+               <strong>Description:</strong> voice recording application, built with
+               <strong>HTML</strong>, <strong>CSS</strong> and 
+               <strong>JavaScript</strong>. It provides users with the ability to 
+               record and manage their recordings directly from the browser.
+              </p>
+            </div>
+            <div class="project_card__btns flex">
+              <a href="https://harreson-lima.github.io/voice-wave/" target="_blank" 
+                class="card__btn glassmorphism flex">
+                <img src="../Assets/open-icon.svg" loading="lazy" alt="icon">
+                <span>Demo</span>
+              </a>
+              <a href="https://github.com/harreson-lima/voice-wave" target="_blank" 
+                class="card__btn glassmorphism flex">
+                <img src="../Assets/github-icon.svg" loading="lazy" alt="icon">
+                <span>Repo</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project_card flex glassmorphism">
+            <div class="project_card__img">
+              <img src="../Assets/projects/harreson-lima.github.io_Dev_Card_.png" 
+                loading="lazy" alt="project image">
+            </div>
+            <div class="project_card__tags flex">
+              <img class="tag" loading="lazy" src="../Assets/tags/tag-html.svg" alt="icon">
+              <img class="tag" loading="lazy" src="../Assets/tags/tag-css.svg" alt="icon">
+              <img class="tag" loading="lazy" src="../Assets/tags/tag-javascript.svg" alt="icon">
+              <img class="tag" loading="lazy" src="../Assets/tags/tag-git.svg" alt="icon">
+            </div>
+            <div class="project_card__info flex">
+              <h3 class="info__title">
+                Dev Card
+              </h3>
+              <p class="info__description">
+               <strong>Description:</strong> application developed in <strong>HTML</strong>, 
+               <strong>CSS</strong> and <strong>javascript</strong>, using the Github 
+               <strong>Api</strong>,Dev Card is a card generation app for Github users.
+              </p>
+            </div>
+            <div class="project_card__btns flex">
+              <a href="https://harreson-lima.github.io/Dev_Card/" target="_blank" 
+                class="card__btn glassmorphism flex">
+                <img loading="lazy" src="../Assets/open-icon.svg" alt="icon">
+                <span>Demo</span>
+              </a>
+              <a href="https://github.com/harreson-lima/Dev_Card" target="_blank" 
+                class="card__btn glassmorphism flex">
+                <img loading="lazy" src="../Assets/github-icon.svg" alt="icon">
+                <span>Repo</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project_card flex glassmorphism">
+            <div class="project_card__img">
+              <img src="../Assets/projects/harreson-lima.github.io_passwordGenerator_.png" 
+                loading="lazy" alt="project image">
+            </div>
+            <div class="project_card__tags flex">
+              <img class="tag" src="../Assets/tags/tag-html.svg" loading="lazy" alt="icon">
+              <img class="tag" src="../Assets/tags/tag-css.svg" loading="lazy" alt="icon">
+              <img class="tag" src="../Assets/tags/tag-javascript.svg" loading="lazy" alt="icon">
+              <img class="tag" src="../Assets/tags/tag-git.svg" loading="lazy" alt="icon">
+            </div>
+            <div class="project_card__info flex">
+              <h3 class="info__title">
+                Password Generator
+              </h3>
+              <p class="info__description">
+               <strong>Description:</strong> application developed in <strong>HTML</strong>, 
+               <strong>CSS</strong> and <strong>javascript</strong>, to generate personalized passwords.
+              </p>
+            </div>
+            <div class="project_card__btns flex">
+              <a href="https://harreson-lima.github.io/passwordGenerator/" target="_blank" 
+                class="card__btn glassmorphism flex">
+                <img src="../Assets/open-icon.svg" loading="lazy" alt="icon">
+                <span>Demo</span>
+              </a>
+              <a href="https://github.com/harreson-lima/passwordGenerator" target="_blank" 
+                class="card__btn glassmorphism flex">
+                <img src="../Assets/github-icon.svg" loading="lazy" alt="icon">
+                <span>Repo</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project_card flex glassmorphism">
+            <div class="project_card__img">
+              <img src="../Assets/projects/harreson-lima.github.io_calculator_.png" 
+                loading="lazy" alt="project image">
+            </div>
+            <div class="project_card__tags flex">
+              <img class="tag" src="../Assets/tags/tag-html.svg" loading="lazy" alt="icon">
+              <img class="tag" src="../Assets/tags/tag-css.svg" loading="lazy" alt="icon">
+              <img class="tag" src="../Assets/tags/tag-javascript.svg" loading="lazy" alt="icon">
+              <img class="tag" src="../Assets/tags/tag-git.svg" loading="lazy" alt="icon">
+            </div>
+            <div class="project_card__info flex">
+              <h3 class="info__title">
+                Web Calculator
+              </h3>
+              <p class="info__description">
+               <strong>Description:</strong> calculator application developed in
+               <strong>HTML</strong>, 
+               <strong>CSS</strong> and <strong>javascript</strong>, 
+               focusing on a modern design.
+              </p>
+            </div>
+            <div class="project_card__btns flex">
+              <a href="https://harreson-lima.github.io/calculator/" target="_blank" 
+                class="card__btn glassmorphism flex">
+                <img src="../Assets/open-icon.svg" loading="lazy" alt="icon">
+                <span>Demo</span>
+              </a>
+              <a href="https://github.com/harreson-lima/calculator" target="_blank" 
+                class="card__btn glassmorphism flex">
+                <img src="../Assets/github-icon.svg" loading="lazy" alt="icon">
+                <span>Repo</span>
+              </a>
+            </div>
+          </div>
+          
+        </div>
       </section>
-
-      <section class="habilidades min_height"></section>
-      <section class="projetos min_height"></section>
-      <section class="contato min_height"></section>
-
-      <footer>
+      <section id="contact" class="contact min_height flex">
+        <button class="btn contact__btn">
+          <span>Copy contact email</span>
+        </button>
+      </section>
+      <button class="go_up">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+    <footer class="flex">
+      <div class="copy">Copyright &copy Harreson Lima 2024</div>
+      <div class="att">
         Illustration by
         <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
           >Icons 8</a
         >
         from <a href="https://icons8.com/illustrations">Ouch!</a>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
 </html>
