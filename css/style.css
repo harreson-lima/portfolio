@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --primary-clr: #121a24;
   --btn-clr: #1f2a3a;
-  --secondary-clr: #00ABEF;
-  --accent-clr: #FF6746;
-  --text-clr: #FAFAFA;
+  --secondary-clr: #00abef;
+  --accent-clr: #ff6746;
+  --text-clr: #fafafa;
   --dark-text-clr: #bdbcd3;
   --game-board-clr: #86c06c;
   --food-clr: #306850;
@@ -91,10 +91,10 @@ a {
 }
 
 .glassmorphism {
-  background: rgba( 255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur( 10px );
-  -webkit-backdrop-filter: blur( 10px );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   position: relative;
   z-index: 2;
 }
@@ -117,8 +117,8 @@ a {
   font-size: var(--fs-5);
   font-weight: bold;
   color: var(--text-clr);
-  -webkit-user-select: none; 
-  -ms-user-select: none; 
+  -webkit-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   transition: transform 0.4s 0.1s;
 }
@@ -131,12 +131,12 @@ a {
   color: var(--accent-clr);
 }
 
-.navigation{
+.navigation {
   list-style: none;
   position: relative;
 }
 
-.naviagtion__item, 
+.naviagtion__item,
 .naviagtion__item a {
   color: var(--text-clr);
   transition: color 0.3s;
@@ -144,7 +144,7 @@ a {
 }
 
 .naviagtion__item:hover,
-.naviagtion__item a:hover  {
+.naviagtion__item a:hover {
   transform: translateY(-5px);
   color: var(--secondary-clr);
 }
@@ -178,17 +178,14 @@ a {
   cursor: pointer;
 }
 
-
-
 /* hero section */
 
-  /* left side */
+/* left side */
 
 .hero__info {
   flex: 1;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .hero__info__title {
@@ -237,21 +234,24 @@ a {
 }
 
 .btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: var(--y);
   left: var(--x);
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 0;
   height: 0;
   opacity: 0;
   border-radius: 50%;
-  background-image: linear-gradient(to right, var(--secondary-clr), var(--accent-clr));
+  background-image: linear-gradient(
+    to right,
+    var(--secondary-clr),
+    var(--accent-clr)
+  );
   transition: width 0.5s, height 0.5s, opacity 0.5s;
-
 }
 
-.btn:hover::before{
+.btn:hover::before {
   height: 450px;
   width: 450px;
   opacity: 1;
@@ -261,7 +261,7 @@ a {
   color: var(--primary-clr);
 }
 
-  /* right side */
+/* right side */
 
 .hero__game {
   flex: 1;
@@ -274,7 +274,7 @@ a {
   height: fit-content;
   background-color: var(--game-box-clr);
   border-radius: 5px;
-  overflow: hidden;  
+  overflow: hidden;
   position: relative;
 }
 
@@ -291,7 +291,7 @@ a {
 
 .start,
 .controls,
-.restart{
+.restart {
   display: none;
   width: 400px;
   top: 70%;
@@ -312,7 +312,6 @@ a {
 .animate_fade {
   animation: fade 0.8s ease-in infinite alternate-reverse;
 }
-
 
 @keyframes fade {
   from {
@@ -336,10 +335,9 @@ a {
   height: 450px;
   background-color: var(--game-board-clr);
   display: grid;
-  grid-template: repeat(30,1fr) / repeat(30,1fr);
-  border-radius: 0 0 5px 5px ;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+  border-radius: 0 0 5px 5px;
 }
-
 
 .game__board__food {
   background-color: var(--food-clr);
@@ -363,7 +361,7 @@ a {
   position: relative;
 }
 
-.about__img--blur{
+.about__img--blur {
   filter: blur(50px);
   opacity: 0.3;
   position: absolute;
@@ -405,7 +403,7 @@ a {
   max-width: 1300px;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%),1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   align-items: start;
   gap: var(--pd-3);
   text-align: center;
@@ -418,7 +416,7 @@ a {
   align-items: center;
 }
 
-.skill__card:first-child{
+.skill__card:first-child {
   grid-row: span 2;
 }
 
@@ -464,7 +462,7 @@ a {
   margin-inline: auto;
   padding: var(--pd-1);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(450px,100%),1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
   gap: var(--pd-3);
 }
 
@@ -497,7 +495,7 @@ a {
   flex-direction: column;
   align-items: flex-start;
   gap: var(--pd-1);
-  color: var(--dark-text-clr );
+  color: var(--dark-text-clr);
 }
 
 .info__title {
@@ -527,7 +525,6 @@ a {
   width: 30px;
 }
 
-
 /* contact section */
 
 .contact {
@@ -545,7 +542,6 @@ a {
   width: 1500px;
   height: 1500px;
 }
-
 
 /* footer */
 
@@ -584,7 +580,7 @@ footer a {
   cursor: pointer;
 }
 
-@media screen and (max-width: 62.5rem){
+@media screen and (max-width: 62.5rem) {
   .about {
     flex-direction: column;
   }
@@ -600,7 +596,6 @@ footer a {
 }
 
 @media screen and (max-width: 46rem) {
-
   .container {
     padding-inline: var(--pd-1);
     width: 100vw;
@@ -618,7 +613,7 @@ footer a {
     transition: transform 0.3s ease-in;
   }
 
-   .navigation li {
+  .navigation li {
     width: 100%;
     text-align: center;
     font-weight: 700;
@@ -641,14 +636,16 @@ footer a {
     background-position: center;
     background-repeat: no-repeat;
     width: 2rem;
-    aspect-ratio: 1; 
+    aspect-ratio: 1;
     margin-right: 15px;
   }
 
   .hamburger[aria-expanded="true"] {
     background-image: url("../Assets/close.svg");
+    position: fixed;
+    right: 5px;
   }
-  
+
   .language {
     position: fixed;
     bottom: 20px;
@@ -658,7 +655,7 @@ footer a {
     height: 60px;
     background-color: var(--game-box-clr);
     border-radius: 50px;
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
   }
@@ -666,7 +663,7 @@ footer a {
   .language a {
     height: 35px;
   }
-   
+
   .hero__info__title {
     font-size: var(--fs-5);
   }
@@ -705,7 +702,7 @@ footer a {
     padding: var(--pd-1) var(--pd-2);
     text-wrap: wrap;
   }
- 
+
   .contact__btn span {
     text-wrap: wrap;
   }
